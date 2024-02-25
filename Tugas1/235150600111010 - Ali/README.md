@@ -4,21 +4,15 @@
 Nama : Mochamad Ali Drajad Priyo Wibowo          
 NIM  : 235150600111010
 
-## 📤 Submission
+## 📤 Submission  
 
-### Template utk opsi tugas 1
-Opsi Tugas : 1        
-Aplikasi / Webapp / Game yang ditiru : Game A     
-Fitur yang ditiru : fitur A     
-
-### Template utk opsi tugas 2
 Opsi Tugas : 2            
 Sistem Informasi yang ditiru : SIAM              
 Fitur yang ditiru :                   
-1. fitur A
-2. fitur B
-3. fitur C 
-4. dst
+1. Masuk ke akun (Log in)
+2. Keluar dari akun (Log out)
+3. Ganti kata sandi
+4. Keluar
 
 ## 🔗 Link Penjelasan Tugas
 
