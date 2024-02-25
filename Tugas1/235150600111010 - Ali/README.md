@@ -1,8 +1,8 @@
 # 📁 Tugas 1 : Mengulang Materi PEMDAS
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Mochamad Ali Drajad Priyo Wibowo          
+NIM  : 235150600111010
 
 ## 📤 Submission
 
