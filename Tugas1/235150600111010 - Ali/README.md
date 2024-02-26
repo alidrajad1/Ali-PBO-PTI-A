@@ -16,5 +16,5 @@ Fitur yang ditiru :
 
 ## 🔗 Link Penjelasan Tugas
 
-https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://www.youtube.com/watch?v=lGGF5bnw4ME
 
