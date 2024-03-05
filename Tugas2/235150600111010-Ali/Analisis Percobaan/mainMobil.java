@@ -1,4 +1,4 @@
-public class Main {
+public class mainMobil {
     public static void main(String[] args) {
         // instan objek bernama m1
         Mobil m1 = new Mobil();

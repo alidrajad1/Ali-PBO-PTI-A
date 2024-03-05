@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class mainSiam {
 
   static String[] Nim = {
       "235150600111010",
