@@ -20,24 +20,7 @@
 2.  Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
 3.  Rubah kode pada mainMobil diatas menjadi proses meminta masukan dari user dan buat menjadi interaktif!
 
-    `Mobil m = new Mobil();
-    System.out.print("Masukkan kecepatan: ");
-    int kecepatan = in.nextInt();
-    in.nextLine();
-    m.setKecepatan(kecepatan);
-    System.out.print("Masukkan manufaktur: ");
-    String manufaktur = in.nextLine();
-    m.setManufaktur(manufaktur);
-    System.out.print("Masukkan plat nomor: ");
-    String platNomor = in.nextLine();
-    m.setNoPlat(platNomor);
-    System.out.print("Masukkan warna: ");
-    String warna = in.nextLine();
-    m.setWarna(warna);
-    System.out.println("Masukkan Waktu: ");
-    Double waktu = in.nextDouble();
-    m.setWaktu(waktu);
-    m.displayMessage();`
+
 
 4.  Tambahkan method pada class mobil bernama setWaktu yang berparameter double, yang kemudian disimpan pada variabel waktu!(Ketetuannya adalah user harus menginputkandalam satuan jam)
 5.  Tambahkan method bernama rubahSekon mempunyai parameter bertipe double dan hanya dapat dipanggil pada class mobil. Method ini memiliki fungsi untuk merubah masukan user yaitu jam menjadi sekon. Method tersebut di panggil pada method setWaktu dengan nilai parameter adalah nilai dari variabel parameter method setWaktu!
@@ -45,3 +28,7 @@
 7.  Tambahkan method pada class mobil bernama hitungJarak yang mempunyai aksi untuk menghitung jarak yang dapat di tempuh oleh mobil dengan rumus jarak = kecepatan \* waktu!
 8.  Tambahkan informasi jarak yang dapat ditempuh pada method displayMessage kemudian rubah satuannya yang awalnya m (meter) menjadi km (kilometer)!
 9.  Mahasiswa A ingin menulis pada sebuah buku tulis yang ingin dia miliki, isi lembar buku tersebut adalah 50 lembar. Setiap harinya ia menulis sebanyak 100 kata perhari yang cukup untuk ½ halaman buku. Buatlah rumus untuk menghitung berapa lama ia menghabiskan 1 buku tersebut serta identifikasilah objek, dan karakteristiknya kemudian implementasikan dalam bentuk class.
+
+
+**TUGAS PRAKTIKUM**
+Suatu perpustakaan di kampus X memiliki banyak koleksi buku, dan buku buku tersebut dikategorikan berdasarkan jenisnya. Ada 7 kategori dalam perpustakaan tersebut yaitu teknologi, filsafat, sejarah, agama, psikologi, politik dan fiksi. Setiap kategori pastilah memiliki banyak buku. Setiap buku ditulis oleh setidaknya 1 penulis, walaupun tak menutup kemungkinan buku tersebut ditulis oleh banyak penulis. Dari studi kasus diatas, tentukan entitas-entitas yang terlibat beserta propertiesnya dan implementasikan kedalam kode program, serta tampilkan ke layar nilai dari properties dari entitas tersebut. (Minimal  tiap kategori ada 5 buku)

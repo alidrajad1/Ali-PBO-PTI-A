@@ -4,5 +4,4 @@ public class mainMahasiswa {
         int lamaMenulis = mahasiswa.hitungLamaMenulis();
         System.out.println(mahasiswa.getNama() + " akan menghabiskan satu buku tulis dalam " + lamaMenulis + " hari.");
     }
-    
 }
