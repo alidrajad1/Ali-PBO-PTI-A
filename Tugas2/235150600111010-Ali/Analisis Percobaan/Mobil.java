@@ -2,8 +2,8 @@ public class Mobil {
     private String noPlat;
     private String warna;
     private String manufaktur;
-    // private int kecepatan;
-    private double kecepatan;
+    private int kecepatan;
+    // private double kecepatan;
     // private double waktu;
     // private double jarak;
 
@@ -19,14 +19,14 @@ public class Mobil {
         manufaktur = s;
     }
 
-    // public void setKecepatan(int i) {
+    public void setKecepatan(int i) {
 
-    //     kecepatan = i;
-    // }
-    public void setKecepatan(double d) {
-        kecepatan = d;
-        // rubahKecepatan(d);
+        kecepatan = i;
     }
+    // public void setKecepatan(double d) {
+    //     kecepatan = d;
+    //     // rubahKecepatan(d);
+    // }
 
     // public void rubahKecepatan(double mps) {
     //     kecepatan = mps * (1000.0/3600.0);
