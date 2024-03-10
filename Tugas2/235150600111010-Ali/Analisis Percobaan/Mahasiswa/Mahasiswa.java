@@ -1,3 +1,4 @@
+package Mahasiswa;
 public class Mahasiswa {
     private String nama;
     private int jumlahHalamanBuku;

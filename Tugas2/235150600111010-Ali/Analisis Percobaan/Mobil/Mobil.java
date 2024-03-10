@@ -1,3 +1,4 @@
+package Mobil;
 public class Mobil {
     private String noPlat;
     private String warna;
