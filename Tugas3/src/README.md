@@ -1,16 +1,16 @@
 # 📁 Tugas 3 : Class Diagram
 
 ## 👤 Identitas Intern
-Nama : Devan             
-NIM  : 22xxxxxx
+Nama : Mochamad Ali Drajad Priyo Wibowo          
+NIM  : 235150600111010
 
 ## 📤 Submission
 
-Tema yang dipilih : 
+Tema yang dipilih : Game
 Class Diagram yang dibuat : 
-1. Class Diagram 1
-2. Class Diagram 2
-dst
+1. Karakter
+2. Senjata
+3. Stage
 
 ## 🔗 Link Penjelasan Tugas
 

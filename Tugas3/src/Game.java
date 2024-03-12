@@ -1,6 +1,7 @@
 public class Game {
 
     public static void main(String[] args) {
+
         Karakter char1 = new Karakter("Hero", 1000, 25);
         Karakter char2 = new Karakter("Villain", 1200, 30);
 
@@ -8,11 +9,13 @@ public class Game {
         char2.pemulihan(25);
         char1.menerimaDamage(20);
 
+
         Senjata Sword = new Senjata("Primordial jade cutter", 214);
 
         Sword.displayInfoSenjata();
         Sword.upgradeSenjata(20);
         Sword.refineSenjata();
+        
 
         Stage floor1 = new Stage(1, "Mudah");
 
