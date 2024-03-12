@@ -1,23 +1,26 @@
 public class Karakter {
     private String nama;
-    private int healtPoint;
+    private int healthPoint;
     private int damage;
 
-    public Karakter(String nama, int healtPoint, int damage) {
+    public Karakter(String nama, int healthPoint, int damage) {
         this.nama = nama;
-        this.healtPoint = healtPoint;
+        this.healthPoint = healthPoint;
         this.damage = damage;
     }
-    
-    public String getNama() {
-        return nama;
+
+    public void serang(Karakter target) {
+        System.out.println(this.nama + " menyerang " + target.nama + " dengan damage " + this.damage);
+        target.menerimaDamage(this.damage);
     }
 
-    public int getHealtPoint() {
-        return healtPoint;
+    public void menerimaDamage(int damage) {
+        this.healthPoint -= damage;
+        System.out.println(this.nama + " menerima damage " + damage + ". Health point sekarang: " + this.healthPoint);
     }
 
-    public int getDamage() {
-        return damage;
+    public void pemulihan(int healing) {
+        this.healthPoint += healing;
+        System.out.println(this.nama + " ditambahkan health point sebesar " + healing + ". Health point sekarang: " + this.healthPoint);
     }
 }

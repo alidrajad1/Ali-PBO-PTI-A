@@ -11,12 +11,12 @@ NIM  : 235150600111010
 
 ### Gunakan tempalate dibawah apabila pengerjaan bagian tugas praktikum merupakan aplikasi interaktif, dan hapus kode baris ini, hapus template berikut beserta kata baris ini apabila tugas praktikum bukan aplikasi interaktif
 
-Nama Aplikasi Program :    
+Nama Aplikasi Program : Sistem informasi Perpustakaan
 Fitur Aplikasi Program :                   
-1. fitur A
-2. fitur B
-3. fitur C 
-4. dst
+1. Cari buku berdasarkan Judul
+2. Cari buku berdasarkan Pengarang
+3. Cari buku berdasarkan Kategori
+4. Tambahkan buku
 
 ## 🔗 Link Penjelasan Tugas
 

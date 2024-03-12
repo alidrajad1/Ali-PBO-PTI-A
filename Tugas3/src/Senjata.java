@@ -7,11 +7,20 @@ public class Senjata {
         this.damage = damage;
     }
 
-    public String getNama() {
-        return nama;
-    }
-
     public int getDamage() {
         return damage;
+    }
+
+    public void displayInfoSenjata() {
+        System.out.println("Senjata: " + nama + ", Damage: " + damage);
+    }
+
+    public void upgradeSenjata(int upgrade) {
+        this.damage += upgrade;
+        System.out.println("Senjata " + this.nama + " telah ditingkatkan. Damage sekarang: " + this.damage);
+    }
+
+    public void refineSenjata() {
+        System.out.println("Senjata " + this.nama + " telah dirifine.");
     }
 }

@@ -11,7 +11,17 @@ public class Stage {
         return level;
     }
 
-    public String getKesulitan() {
-        return kesulitan;
+    public void displayInfoStage() {
+        System.out.println("Level: " + level + ", Kesulitan: " + kesulitan);
+    }
+
+    public void ubahKesulitan(String ubah) {
+        this.kesulitan = ubah;
+        System.out.println("Kesulitan di ubah ke " + kesulitan);
+    }
+
+    public void levelUp(int tambah) {
+        this.level += tambah;
+        System.out.println("Stage telah naik ke level " + this.level);
     }
 }
