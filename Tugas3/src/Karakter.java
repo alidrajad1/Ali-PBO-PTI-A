@@ -29,7 +29,7 @@ public class Karakter {
         return nama;
     }
 
-    public int setHealtPoint() {
+    public int setHealthPoint() {
         return healthPoint;
     }
 

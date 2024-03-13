@@ -22,11 +22,11 @@ public class Stage {
         System.out.println("Stage telah naik ke level " + this.level);
     }
 
-    public int setLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public String setKesulitan() {
+    public String getKesulitan() {
         return kesulitan;
     }
 

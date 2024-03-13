@@ -20,11 +20,11 @@ public class Senjata {
         System.out.println("Senjata " + this.nama + " telah dirifine.");
     }
 
-    public String setNama() {
+    public String getNama() {
         return nama;
     }
 
-    public int setDamage() {
+    public int getDamage() {
         return damage;
     }
 
