@@ -1,5 +1,5 @@
 1.  Apakah yang disebut dengan variabel instance dan lokal variabel? Jelaskan perbedaanya!
-    **Variabel instance** adalah variabel yang dideklarasikan di dalam sebuah kelas tetapi di luar dari metode atau blok kelas tersebut. Setiap objek yang dibuat dari kelas akan memiliki salinan variabel instance tersebut, yang berarti setiap objek memiliki salinan yang terpisah dan independen dari variabel instance.
+ **Variabel instance** adalah variabel yang dideklarasikan di dalam sebuah kelas tetapi di luar dari metode atau blok kelas tersebut. Setiap objek yang dibuat dari kelas akan memiliki salinan variabel instance tersebut, yang berarti setiap objek memiliki salinan yang terpisah dan independen dari variabel instance.
 
        ```java
        public class Kucing {
@@ -9,7 +9,7 @@
             }
         }
         ```
-    **Variabel lokal** adalah variabel yang dideklarasikan di dalam blok metode, konstruktor, atau blok lain di dalam suatu metode. Variabel lokal hanya berlaku di dalam blok tempat mereka dideklarasikan. Mereka tidak dapat diakses dari luar blok tersebut.
+ **Variabel lokal** adalah variabel yang dideklarasikan di dalam blok metode, konstruktor, atau blok lain di dalam suatu metode. Variabel lokal hanya berlaku di dalam blok tempat mereka dideklarasikan. Mereka tidak dapat diakses dari luar blok tersebut.
 
 ```java
         public class MyClass {
