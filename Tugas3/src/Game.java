@@ -2,8 +2,8 @@ public class Game {
 
     public static void main(String[] args) {
 
-        Karakter char1 = new Karakter("Hero", 1000, 25);
-        Karakter char2 = new Karakter("Villain", 1200, 30);
+        Karakter char1 = new Karakter("Keqing", 1000, 25);
+        Karakter char2 = new Karakter("Hillicurl", 1200, 30);
 
         char1.serang(char2);
         char2.pemulihan(25);

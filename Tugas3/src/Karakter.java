@@ -23,4 +23,5 @@ public class Karakter {
         this.healthPoint += healing;
         System.out.println(this.nama + " ditambahkan health point sebesar " + healing + ". Health point sekarang: " + this.healthPoint);
     }
+
 }
