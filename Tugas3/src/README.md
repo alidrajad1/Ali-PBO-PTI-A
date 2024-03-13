@@ -8,9 +8,9 @@ NIM  : 235150600111010
 
 Tema yang dipilih : Game
 Class Diagram yang dibuat : 
-1. Karakter
-2. Senjata
-3. Stage
+1. Class Diagram Karakter
+2. Class Diagram Senjata
+3. Class Diagram Stage
 
 ## 🔗 Link Penjelasan Tugas
 

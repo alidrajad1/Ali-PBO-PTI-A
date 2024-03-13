@@ -21,7 +21,20 @@ public class Karakter {
 
     public void pemulihan(int healing) {
         this.healthPoint += healing;
-        System.out.println(this.nama + " ditambahkan health point sebesar " + healing + ". Health point sekarang: " + this.healthPoint);
+        System.out.println(this.nama + " ditambahkan health point sebesar " + healing + ". Health point sekarang: "
+                + this.healthPoint);
+    }
+    
+    public String setNama() {
+        return nama;
+    }
+
+    public int setHealtPoint() {
+        return healthPoint;
+    }
+
+    public int setDamage() {
+        return damage;
     }
 
 }
