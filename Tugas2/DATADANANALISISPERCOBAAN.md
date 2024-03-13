@@ -8,7 +8,7 @@
             this.Berat = value;
             }
         }
-        ```
+       
  **Variabel lokal** adalah variabel yang dideklarasikan di dalam blok metode, konstruktor, atau blok lain di dalam suatu metode. Variabel lokal hanya berlaku di dalam blok tempat mereka dideklarasikan. Mereka tidak dapat diakses dari luar blok tersebut.
 
 ```java
