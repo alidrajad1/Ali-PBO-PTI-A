@@ -2,6 +2,7 @@ public class Karakter {
     private String nama;
     private int healthPoint;
     private int damage;
+    public String setNama;
 
     public Karakter(String nama, int healthPoint, int damage) {
         this.nama = nama;
@@ -25,15 +26,15 @@ public class Karakter {
                 + this.healthPoint);
     }
     
-    public String setNama() {
+    public String getNama() {
         return nama;
     }
 
-    public int setHealthPoint() {
+    public int getHealthPoint() {
         return healthPoint;
     }
 
-    public int setDamage() {
+    public int getDamage() {
         return damage;
     }
 

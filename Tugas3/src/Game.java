@@ -2,12 +2,12 @@ public class Game {
 
     public static void main(String[] args) {
 
-        Karakter char1 = new Karakter("Keqing", 1000, 25);
-        Karakter char2 = new Karakter("Hillicurl", 1200, 30);
+        Karakter char1 = new Karakter("Keqing", 21000, 2300);
+        Karakter char2 = new Karakter("Lawacurl", 37000, 2100);
 
         char1.serang(char2);
-        char2.pemulihan(25);
-        char1.menerimaDamage(20);
+        char2.pemulihan(1239);
+        char1.menerimaDamage(3421);
 
 
         Senjata Sword = new Senjata("Primordial jade cutter", 214);

@@ -14,12 +14,12 @@ public class Perpustakaan {
 
     private void daftarKategori() {
         sKategori.put("Teknologi", new ArrayList<>());
-        sKategori.put("Filsafat", new ArrayList<>());
         sKategori.put("Sejarah", new ArrayList<>());
+        sKategori.put("Filsafat", new ArrayList<>());
         sKategori.put("Agama", new ArrayList<>());
-        sKategori.put("Bahasa", new ArrayList<>());
+        sKategori.put("Psikologi", new ArrayList<>());
         sKategori.put("Politik", new ArrayList<>());
-        sKategori.put("Ekonomi", new ArrayList<>());
+        sKategori.put("Fiksi", new ArrayList<>());
         
     }
 
@@ -37,7 +37,7 @@ public class Perpustakaan {
         return sKategori.get(kategori);
     }
 
-    public List<Buku> cariJUdul(String judul) {
+    public List<Buku> cariJudul(String judul) {
         return sKategori.values().stream()
                 .flatMap(List::stream)
                 .filter(buku -> buku.getJudul().toLowerCase().contains(judul.toLowerCase()))

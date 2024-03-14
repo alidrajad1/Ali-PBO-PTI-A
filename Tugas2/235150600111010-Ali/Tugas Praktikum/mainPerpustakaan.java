@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class mainPerpustakaan {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Perpustakaan perpustakaan = new Perpustakaan();
@@ -10,6 +11,7 @@ public class mainPerpustakaan {
         cariBuku(perpustakaan, scanner);
 
         scanner.close();
+
     }
 
 
@@ -35,7 +37,7 @@ public class mainPerpustakaan {
                 cariDariPengarang(perpustakaan, pengarang);
                 break;
             case 3:
-                System.out.println("Kategori: Teknologi, Filsafat, Sejarah, Agama, Bahasa, Politik, Ekonomi");
+                System.out.println("Kategori: Teknologi, Filsafat, Sejarah, Agama, Psikologi, Politik, Fiksi ");
                 System.out.print("Masukkan kategori: ");
                 String kategori = scanner.nextLine();
                 cariDariKategori(perpustakaan, kategori);
@@ -50,12 +52,14 @@ public class mainPerpustakaan {
 
     private static void cariDariJudul(Perpustakaan perpustakaan, String judul) {
         System.out.println("Hasil pencarian untuk judul \"" + judul + "\":");
-        perpustakaan.cariJUdul(judul).forEach(book -> {
+        perpustakaan.cariJudul(judul).forEach(book -> {
             System.out.println("Judul: " + book.getJudul());
             System.out.println("Penulis: " + String.join(", ", book.getPengarang()));
             System.out.println("Kategori: " + perpustakaan.getKategoriByBuku(book));
             System.out.println();
         });
+
+        cariBuku(perpustakaan, scanner);
     }
 
     private static void cariDariPengarang(Perpustakaan perpustakaan, String pengarang) {
@@ -66,15 +70,26 @@ public class mainPerpustakaan {
             System.out.println("Kategori: " + perpustakaan.getKategoriByBuku(book));
             System.out.println();
         });
+        cariBuku(perpustakaan, scanner);
     }
 
     private static void cariDariKategori(Perpustakaan perpustakaan, String kategori) {
+
+        perpustakaan.addBuku("Teknologi", new Buku("Buku 1", List.of("Pengarang a")));
+        perpustakaan.addBuku("Teknologi", new Buku("Buku 2", List.of("Pengarang b", "Pengarang b1")));
+        perpustakaan.addBuku("Teknologi", new Buku("Buku 3", List.of("Pengarang c")));
+        perpustakaan.addBuku("Teknologi", new Buku("Buku 4", List.of("Pengarang d","Pengarang d1")));
+        perpustakaan.addBuku("Teknologi", new Buku("Buku 5", List.of("Pengarang e")));
+
         System.out.println("Hasil pencarian untuk kategori \"" + kategori + "\":");
         perpustakaan.cariKategori(kategori).forEach(book -> {
             System.out.println("Judul: " + book.getJudul());
             System.out.println("Penulis: " + String.join(", ", book.getPengarang()));
             System.out.println();
         });
+        
+        cariBuku(perpustakaan, scanner);
+
     }
 
     private static void addBukuBaru(Perpustakaan perpustakaan, Scanner scanner) {
@@ -93,4 +108,5 @@ public class mainPerpustakaan {
 
         cariBuku(perpustakaan, scanner);
     }
+
 }
