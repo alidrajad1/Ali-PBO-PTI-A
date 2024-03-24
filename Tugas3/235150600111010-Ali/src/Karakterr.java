@@ -1,16 +1,16 @@
-public class Karakter {
+public class Karakterr {
     private String nama;
     private int healthPoint;
     private int damage;
     public String setNama;
 
-    public Karakter(String nama, int healthPoint, int damage) {
+    public Karakterr(String nama, int healthPoint, int damage) {
         this.nama = nama;
         this.healthPoint = healthPoint;
         this.damage = damage;
     }
 
-    public void serang(Karakter target) {
+    public void serang(Karakterr target) {
         System.out.println(this.nama + " menyerang " + target.nama + " dengan damage " + this.damage);
         target.menerimaDamage(this.damage);
     }
