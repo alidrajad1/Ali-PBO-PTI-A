@@ -9,7 +9,6 @@ public class Game {
         char2.pemulihan(1239);
         char1.menerimaDamage(3421);
 
-
         Senjata Sword = new Senjata("Primordial jade cutter", 214);
 
         Sword.displayInfoSenjata();
@@ -23,6 +22,7 @@ public class Game {
         floor1.levelUp(1);
         floor1.ubahKesulitan("Sulit");
         floor1.displayInfoStage();
+
     }
 
 }
