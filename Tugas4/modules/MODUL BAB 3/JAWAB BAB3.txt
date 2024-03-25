@@ -1,0 +1,67 @@
+A. Overloading Method
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Jawab: Percobaan tersebut dapat dilakukan tanpa adanya error, hal ini menandakan bahwa tidak
+ada kesalahan dalam program tersebut.
+
+
+2. Jika pada baris 7, pada parameter double value dan double value2 di hapus dan di ganti 
+menjadi int a dan int b apa yang terjadi? Jelaskan!
+Jawab: Berikut merupakan kode yang telah diubah:
+'''public static double hitungLuas(int a, int b) {
+        double nilai = a * b;
+        return nilai;
+'''}
+Setelah parameter diubah akan terjadi compile error, hal ini terjadi karena return value
+dari method tersebut adalah double sedangkan parameter dari method tersebut adalah integer.
+
+
+3. Rubah  method  pada  baris  ketujuh  menjadi  method  bertipe  void,  dan  lakukan  juga 
+perubahan main method.
+Jawab: Kode program dibuah menjadi:
+'''public static void hitungLuas(double value, double value2) {
+        double nilai = value * value2;
+        System.out.println("Luas bangun tersebut adalah " + nilai);;
+'''}
+Setelah diubah menjadi bertipe void, method tidak perlu untuk mereturn
+suatu nilai sehingga tidak perlu return nilai;. 
+
+B. Overloading Constructor
+
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan!
+Jawab: Saat kode program dijalankan, program dapat dijalankan dengan baik 
+tanpa ada error, sehinggga dapat disimpulkan tidak ada kesalahan dalam program 
+tersebut.
+
+
+2. Pada class lingkaran Tambahkan constructor dengan parameter int tinggi, apa yang terjadi 
+dan jelaskan!
+Jawab: Kode yang ditambahkan adalah:
+'''public Lingkaran(int tinggi) {
+    this.tinggi = tinggi;
+'''}
+Setelah constructor ditambahkan, terjadi error hal ini terjadi karena terdapat constructor dengan
+variabel parameter yang sama yaitu integer.
+
+
+3. Pada class lingkaran tambahkan constrctor dengan tipe data String alas dan String tinggi, 
+kemudian  tambahkan  method  untuk  melakukan  parsing  atau  perubahan  tipe  data  dari 
+String  menjadi  integer.  Setelah  itu  pada  method  main  lakukan  instansiasi  objek  dengan 
+nama objek Lstring dengan memanggil constructor bertipe data String. Jelaskan!
+Jawab: Method yang ditambahkan adalah:
+'''public Lingkaran(String alas, String tinggi) {
+        this.alas = parseToInt(alas);
+        this.tinggi = parseToInt(tinggi);
+    }
+
+    public int parseToInt(String value){
+        return Integer.parseInt(value);
+'''}
+'''
+Lingkaran Lstring = new Lingkaran("6", "12");
+     Lstring.displayMessage();
+'''
+Apabila dilakukan instansiasi objek dengan constrctor yang telah
+dtambhakan, objek tersebut akan meminta operator dengan format String.
+Selanjutnya setelah dipanggil method displayMessage() hasil akan ditampilkan 
+tanpa adanya error.

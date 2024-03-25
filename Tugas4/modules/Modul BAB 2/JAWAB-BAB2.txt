@@ -1,0 +1,190 @@
+A. Constructor
+
+1.	Lakukan percobaan constructor diatas dan benahi jika menemukan kesalahan!
+Jawab: 
+Kode tersebut tidak dapat untuk dijalankan, hal ini terjadi karena terdapat kesalahan 
+dalam constructor untuk class Student. Hal ini disebabkan karena nama dari constructor tidak 
+sama dengan nama class. Dalam hal ini nama constructor adalah student sedangkan nama class adalah 
+Student (dalam pemrograman java huruf kecil dan huruf kapital dibedakan).
+
+
+2.	Tambahkan constructor pada class Student dengan parameter yang mempunyai parameter masing masing 
+nilai dari mata pelajaran yang ada! Kemudian buat contoh objeknya pada main Class!
+Jawab: Kode yang ditambahkan adalah sebagai berikut:
+'''Publicublic Student(String name, String address, int age, int mathGrade, int englishGrade, int scienceGrade){
+    this.name = name;
+    this.address = address;
+    this.age = age;
+    this.mathGrade = mathGrade;
+    this.englishGrade = englishGrade;
+    this.scienceGrade = scienceGrade;
+  }
+'''
+
+setelah menambahkan constructor seperti diatas kita dapat mengisi parameter nilai saat objek dipanggil.
+3.	Tambahkan method dengan nilai balikan berupa boolean pada class student bernama statusAkhir untuk menentukan apakah siswa tersebut remidi atau tidak. 
+Ketentuannya adalah jika nilai lebih dari atau sama dengan 61 adalah lolos sedangkan nilai kurang dari atau sama dengan 60 adakah remidi. Nilai yang di cari 
+adalah nilai rata rata untuk semua mapel. Kemudian nilai pada method statusAkhir tampilkan pada method displayMessage!
+Jawab: Method yang ditambahkan adalah sebagai berikut:
+'''public boolean statusAkhir(){
+    double rataNilai =  getAverage();
+    return rataNilai >= 61 ? false : true;
+  }
+'''
+'''public void displayMessage() {
+        ...
+        System.out.println("Status Akhir: " + (statusAkhir() ? "Remidi" : "Lolos"));
+   }
+'''
+Method statusAkhir digunakan untuk menentukan status akhir siswa, yaitu apakah siswa tersebut 
+perlu remidi atau sudah lolos. Prosesnya adalah dengan menghitung nilai rata-rata (rataNilai) 
+menggunakan method getAverage, lalu mengembalikan nilai true jika nilai rata-rata kurang dari 
+61 (artinya siswa perlu remidi), dan mengembalikan false jika nilai rata-rata lebih dari atau 
+sama dengan 61 (artinya siswa lolos).
+Digunakan operator ternary ? : untuk menampilkan 
+teks "Remidi" jika method statusAkhir mengembalikan true, atau "Lolos" jika method statusAkhir 
+mengembalikan false. Hal ini memberikan informasi jelas kepada pengguna apakah siswa tersebut perlu 
+remidi atau sudah lolos.
+
+
+4.	Bagaimana cara memasukkan jumlah siswa sesuai dengan keinginan user? Tuliskan kodenya 
+dengan inputan user yang interaktif! (key : menggunakan array)
+Jawab: Untuk memasukkan jumlah siswa sesuai dengan keinginan pengguna, kita dapat menggunakan input
+interaktif dari pengguna untuk menentukan berapa banyak siswa yang ingin dimasukkan. Hal ini dapat 
+dilakukan dengan meminta pengguna untuk memasukkan jumlah siswa yang diinginkan melalui inputan interaktif, 
+kemudian kita dapat membuat array dengan ukuran sesuai dengan jumlah siswa yang dimasukkan oleh pengguna. 
+Setelah itu, kita dapat mengisi data siswa satu per satu sesuai dengan inputan pengguna. Dengan menggunakan 
+array, kita dapat mengelola data siswa secara efisien dan fleksibel sesuai dengan kebutuhan pengguna.
+'''
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah siswa: ");
+        int jumlahSiswa = scanner.nextInt();
+
+        Student[] siswa = new Student[jumlahSiswa];
+
+        for (int i = 0; i < jumlahSiswa; i++) {
+            scanner.nextLine(); // Membersihkan buffer
+            System.out.println("Masukkan informasi siswa ke-" + (i + 1));
+            System.out.print("Nama: ");
+            String nama = scanner.nextLine();
+            System.out.print("Alamat: ");
+            String alamat = scanner.nextLine();
+            System.out.print("Usia: ");
+            int usia = scanner.nextInt();
+            System.out.print("Nilai Matematika: ");
+            int nilaiMatematika = scanner.nextInt();
+            System.out.print("Nilai Bahasa Inggris: ");
+            int nilaiBahasaInggris = scanner.nextInt();
+            System.out.print("Nilai IPA: ");
+            int nilaiIPA = scanner.nextInt();
+
+            siswa[i] = new Student(nama, alamat, usia, nilaiMatematika, nilaiBahasaInggris, nilaiIPA);
+        }
+
+        scanner.close();
+
+        // Tampilkan informasi semua siswa
+        for (int i = 0; i < jumlahSiswa; i++) {
+            siswa[i].displayMessage();
+            System.out.println();
+        }
+'''
+Dalam kode di atas, pengguna diminta untuk memasukkan jumlah 
+siswa yang ingin dimasukkan ke dalam program. Kemudian, program 
+akan menginisialisasi array siswa berdasarkan jumlah siswa yang 
+dimasukkan. Setelah itu, program akan meminta informasi untuk setiap 
+siswa sesuai dengan jumlah siswa yang dimasukkan oleh pengguna, dan 
+kemudian menampilkan informasi semua siswa yang telah dimasukkan.
+
+
+5.  Bagaimana cara menghitung banyaknya objek yang kita buat dari 
+sebuah menginstance objek dari mein class? Tuliskan kodenya kemudian 
+tampilkan informasinya dengan memanggil method jumlahObjek() bertipe void!
+Jawab: Untuk menghitung banyaknya objek yang dibuat dari sebuah kelas, KIta 
+dapat menggunakan sebuah variabel static yang akan bertambah setiap kali sebuah 
+objek baru di-instance. Dengan menggunakan variabel static jumlahObjek, kita dapat 
+menghitung dan menyimpan jumlah objek yang dibuat dari kelas Student. Kita dapat memanggil 
+method jumlahObjek() dari mana pun di program Anda untuk menampilkan informasi tentang jumlah 
+objek yang telah dibuat.
+Kode dapat dituliskan sebagai berikut:
+'''public class Student {
+    private static int jumlahObjek = 0; // Variabel static untuk menghitung jumlah objek
+
+    // Konstruktor default dan konstruktor lainnya seperti yang telah Anda definisikan
+
+    public Student() {
+        name = "";
+        address = "";
+        age = 0;
+        jumlahObjek++; // Menambah jumlah objek setiap kali objek baru di-instance
+    }
+
+    public Student(String name, String address, int age, int mathGrade, int englishGrade, int scienceGrade){
+        // Inisialisasi atribut seperti yang telah Anda definisikan
+        jumlahObjek++; // Menambah jumlah objek setiap kali objek baru di-instance
+    }
+
+    // Metode lain seperti setName, setAddress, dsb.
+
+    public static void jumlahObjek() {
+        System.out.println("Jumlah objek Student yang telah dibuat: " + jumlahObjek);
+    }
+
+    // Metode displayMessage() dan lainnya seperti yang telah Anda definisikan
+}
+'''
+
+B. instance Method
+
+1. Lakukan percobaan Instance Method diatas dan benahi jika menemukan kesalahan!
+Jawab: Setelah disalin, kode dapat dijalankan tanpa adanya error. Hal tersebut menandakan
+tidak terdapat kesalahan dalam kode tersebut.
+
+
+2. Tambahkan Method untuk operator <, <=, >=
+Jawab: Method yang ditambahkan adalah sebagai berikut: 
+'''
+public boolean lessThan(Rasional A) {
+        return (pembilang * A.penyebut < penyebut * A.pembilang);
+    }
+    public boolean lessOrSameThan(Rasional A) {
+        return (pembilang * A.penyebut <= penyebut * A.pembilang);
+    }
+    public boolean moreOrSameThan(Rasional A) {
+        return (pembilang * A.penyebut >= penyebut * A.pembilang);
+    }
+'''
+Method untuk operator <, <=, >= kurang lebih sama dengan operator moreThan
+perbedaannya terdapat pada operator binary di dalam body method. 
+
+
+3. Ubah method sederhana pada baris 25 – 30 yang awalnya adalah menggunakan 
+while menjadi for!
+Jawab: Method while akan dirubah seperti berikut:
+'''for (int i = 0; B != 0; ++i) {
+            temp = A % B;
+            A = B;
+            B = temp;
+'''     }
+Setelah kode dijalankan, program berjalan sama seperti sebelum method dirubah.
+
+
+4. Tambahkan method untuk operasi -,*,/!
+Jawab: Method yang ditambahkan adalah sebagai berikut:
+'''
+ public void unaryMinus(Rasional A) {
+        pembilang = pembilang * A.penyebut - penyebut * A.pembilang;
+        penyebut *= A.penyebut;
+    }
+    public void unaryMultiply(Rasional A) {
+        pembilang *=A.pembilang;
+        penyebut *= A.penyebut;
+    }
+    public void unaryDivision(Rasional A) {
+        pembilang *= A.penyebut;
+        penyebut *= A.Pembilang;
+    }
+'''
+Method diatas merupakan method unutk pengurangan, perkalian, dan pembagian
+pecahan
