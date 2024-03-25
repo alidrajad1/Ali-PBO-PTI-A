@@ -21,16 +21,16 @@ public class Karakter {
         damage = 132;
     }
 
-    public void menyerang() {
+    public void Serang() {
         System.out.println(this.nama + " Menyerang musuh dengan damage " + this.damage);
     }
 
-    public void menyerang(int critX) {
+    public void Serang(int critX) {
         System.out.println(this.nama + " Menyerang musuh dengan damage critical " + this.damage * critX);
     }
 
-    public void menyerang(Karakter musuh) {
-        System.out.println(this.nama + " Menyerang " + musuh.nama + " dengan damage " + this.damage);
+    public void Serang(Karakter musuh) {
+        System.out.println(this.nama + " Menyerang" + musuh.nama + " dengan damage " + this.damage);
     }
 
     public Karakter getKarakter() {
@@ -49,8 +49,12 @@ public class Karakter {
         return damage;
     }
 
+    public Karakter cloneKarakter() {
+        return new Karakter(this.nama, this.healtPoint, this.damage);
+    }
+
     public void tampilkanInfo() {
-        System.out.println("Informasi " + this.nama + ":");
+        System.out.println("Informasi: " + this.nama);
         System.out.println("Health Point: " + this.healtPoint);
         System.out.println("Damage: " + this.damage);
     }
