@@ -1,0 +1,100 @@
+A. Constructor 1
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan! 
+Jawab: Ketika kode diketikkan ke dalam VScode terdapat beberapa error di program Test.java:
+    "mark cannot be resolved to a variable",
+    "name cannot be resolved to a variable",
+    "The method setMark(int) in the type Student is not applicable for the arguments ()",
+    "The method setName(String) in the type Student is not applicable for the arguments ()",
+    "The method setMark(int) in the type Student is not applicable for the arguments (String)".
+error tersebut dikarenakan adanay kelashan berikut
+'''
+    s1.setMark("90"); //Parameter dalam method setMark adalah int sedangkan yang dimasukkan adalah String
+    System.out.println("s1Name is " + s1.setName()); //Untuk mengakses atribut name perlu menggunakan method getName, 
+    karena atribut tersebut sudah di enkapsulasi
+    System.out.println("s1Mark is " + s1.setMark()); //Untuk mengakses atribut Mark perlu menggunakan method getMark, 
+    karena atribut tersebut sudah di enkapsulasi
+    System.out.println("name dan mark " + name + " " + mark); //Untuk mengakses atribut name dan mark perlu menggunakan 
+    method getMark dan getName, karena atribut tersebut sudah di enkapsulasi.
+'''   
+Perbaikan kode diatas adalah sebagai berikut:
+'''
+    s1.setMark(90);
+    System.out.println("s1Name is " + s1.getName());
+    System.out.println("s1Mark is " + s1.getMark());
+    System.out.println("name dan mark " + s1.getName() + " " + s1.getMark());
+'''
+
+
+2. Jika pada baris 6 s1.setName diubah menjadi s1.getName apa yang terjadi? jelaskan! 
+Jawab:
+'''
+    System.out.println("s1Name is " + s1.getName());
+'''
+Setelah s1.setName diubah menjadi s1.getName error dalam program tersebut hilang. 
+Sebelumnya s1.setName seharusnya mengisikan parameter dengan variable String, method setName
+digunakan untuk mengubah atribut name yang telah di enkapsulasi.
+
+
+3. Setelah diperbaiki, ubahlah hak akses pada baris 4 (pada class Student)  menjadi private 
+apa yang terjadi jika class Test dijalankan? Jelaskan! 
+Jawab: Setelah  hak akses pada method tersebut diubah menjadi private seperti berikut:
+'''
+ private void setName(String n) {
+        name = n;
+    }
+'''
+Apabila class Test dijalankan akan terjadi error, karena method setName tidak dapat diakses.
+
+
+4. Jika kedua kelas diatas terdapat dalam package yang sama apakah konsep enkapsulasi 
+tetap berfungsi? jelaskan!
+Jawab: 
+Jika kedua kelas diatas terdapat dalam package yang sama, konsep enkapsulasi tetap berfungsi meskipun 
+kedua kelas berada dalam package yang sama. Konsep enkapsulasi pada dasarnya adalah tentang pembatasan 
+akses langsung ke atribut dan metode dari luar kelas. Dengan demikian, meskipun kelas-kelas tersebut berada 
+dalam package yang sama, akses langsung ke atribut dan metode yang bersifat private tetap tidak dapat dilakukan 
+dari luar kelas tersebut.
+
+
+B. Constructor 2
+1. Method apakah yang menjadi accessor (getter) ?
+Jawab: Method yang menjadi accessor (getter) adalah:
+'''
+    public double getLoad() {
+        return this.load;
+    }
+    public double getMaxLoad() {
+        return this.maxLoad;
+    }
+'''
+Method tersebut berfungsi untuk mengakses atribu load dan maxLoad
+
+2. Tambahkan source code berikut dibawah baris ke 6 pada class TestVehicle1. 
+    System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+Jalankan program, apakah output dari program tersebut?  
+Kembalikan program seperti semula. 
+Jawab: 
+
+
+3. Ubahlah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi public.  
+Jalankan program, apakah output dari program tersebut? 
+    a. Tambahkan source kode berikut dibawah baris ke 6 pada class TestVehicle1. 
+        System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+    Jalankan program, apakah output dari program tersebut?  
+    Kembalikan program seperti semula. 
+    b. Tambahkan source kode berikut dibawah baris ke 12 pada class TestVehicle1. 
+        System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
+    Jalankan program, apakah output dari program tersebut?  
+    Kembalikan program seperti semula. 
+Jawab:
+
+
+4. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
+pada class Vehicle1 menjadi protected.  
+Jawab:
+
+
+5. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
+pada class Vehicle1 menjadi default. 
+Jawab:
+
