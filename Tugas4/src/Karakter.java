@@ -30,11 +30,11 @@ public class Karakter {
     }
 
     public void Serang(Karakter musuh) {
-        System.out.println(this.nama + " Menyerang" + musuh.nama + " dengan damage " + this.damage);
+        System.out.println(this.nama + " Menyerang " + musuh.nama + " dengan damage " + this.damage);
     }
 
     public Karakter getKarakter() {
-        return this;
+        return this; 
     }
 
     public String getNama() {
