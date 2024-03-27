@@ -73,7 +73,10 @@ Method tersebut berfungsi untuk mengakses atribu load dan maxLoad
     System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
 Jalankan program, apakah output dari program tersebut?  
 Kembalikan program seperti semula. 
-Jawab: 
+Jawab: Setelah ditambahkan akan terjadi error, hal ini diakibatkan karena atribut load
+bersifat private sehingga tidak dapat diakses secara langsung. Untuk mengakses atribut yang
+bersifat private perlu menggunkan method accessor, contohnya unutk mengakses atribut load kita 
+perlu memanggil method getLoad().
 
 
 3. Ubahlah tipe data pada atribut load dan maxload pada class Vehicle1 menjadi public.  
@@ -86,15 +89,73 @@ Jalankan program, apakah output dari program tersebut?
         System.out.println("Add load(100kg) : " + (vehicle.load=500)); 
     Jalankan program, apakah output dari program tersebut?  
     Kembalikan program seperti semula. 
-Jawab:
+Jawab: 
+a. Setelah tipe data atribut load dan maxload diubah menjadi public, tidak terjadi 
+error pada saat kode ditambahkan dan output dari program tersebut adalah:
+    Creating a vehicle with a 10,000 kg maximumload.
+    Add box #1 (500kg) : true
+    Add box #2 (250kg) : true
+    Add load(100kg) : 500.0
+    Add box #3 (5000kg) : true
+    Add box #4 (4000kg) : true
+    Add box #5 (300kg) : true
+    Vehicle load is 9800.0kg
+b. Tidak terjadi error pada saat kode ditambahkan dan output dari program tersebut adalah:
+    Creating a vehicle with a 10,000 kg maximumload.
+    Add box #1 (500kg) : true
+    Add box #2 (250kg) : true
+    Add box #3 (5000kg) : true
+    Add box #4 (4000kg) : true
+    Add box #5 (300kg) : false
+    Vehicle load is 9750.0kg
+    Add load(100kg) : 500.0
 
 
 4. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
 pada class Vehicle1 menjadi protected.  
-Jawab:
-
+Jawab: Setelah tipe data atribut load dan maxload diubah menjadi public, tidak terjadi 
+error pada saat kode ditambahkan dan output dari program tersebut adalah:
+    Creating a vehicle with a 10,000 kg maximumload.
+    Add box #1 (500kg) : true
+    Add box #2 (250kg) : true
+    Add box #3 (5000kg) : true
+    Add box #4 (4000kg) : true
+    Add box #5 (300kg) : false
+    Vehicle load is 9750.0kg
+    Add load(100kg) : 500.0
 
 5. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
 pada class Vehicle1 menjadi default. 
-Jawab:
+Jawab: etelah tipe data atribut load dan maxload diubah menjadi default, tidak terjadi error 
+pada saat kode ditambahkan dan output dari program tersebut adalah:
+    Creating a vehicle with a 10,000 kg maximumload.
+    Add box #1 (500kg) : true
+    Add box #2 (250kg) : true
+    Add box #3 (5000kg) : true
+    Add box #4 (4000kg) : true
+    Add box #5 (300kg) : false
+    Vehicle load is 9750.0kg
+    Add load(100kg) : 500.0
 
+Tugas Praktikum
+Anda dan tim anda mendapat sebuah proyek untuk merancang sistem transaksi pada 
+sebuah swalayan Tiny. Anda ditugasi oleh tim untuk membuat programnya berdasarkan 
+hasil analisis tim anda : 
+ 
+1. Informasi akun seorang pelanggan (saldo, nomor pelanggan, nama) tidak bias 
+diubah oleh pelanggan secara langsung. 
+2. Nomor pelanggan terdiri dari 10 digit, dimana 2 digit awal adalah jenis rekening 
+    o 38 : Pelanggan jenis silver; setiap pembelian diatas 1 jt maka mendapat 
+    cashback sebesar 5% 
+    o 56 : Pelanggan jenis gold; setiap pembelian diatas 1 jt maka mendapat 
+    cashback sebesar 7%, selain itu cashback 2% (cashback kembali ke saldo) 
+    o 74 : Pelanggan jenis platinum; setiap pembelian diatas 1 jt maka 
+    mendapat cashback sebesar 10%, selain itu cashback 5% (cashback 
+    kembali ke saldo) 
+3. Pelanggan harus memiliki saldo minimal Rp10.000, jika saldo pasca transaksi kurang 
+dari batas minimal tadi, maka transaksi pembelian dianggap gagal 
+4. Buatlah sistem transaksi swalayan ini terbatas pada pembelian dan top up saja dan 
+menggunakan PIN dan nomor pelanggan sebagai syarat transaksi pembelian atau 
+top up. 
+5. Apabila pelanggan melakukan 3x kesalahan dalam autentifikasi, maka akun 
+pelanggan akan defreeze / diblokir sehingga tidak bisa digunakan lagi. 
