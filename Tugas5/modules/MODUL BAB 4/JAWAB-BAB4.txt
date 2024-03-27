@@ -6,7 +6,7 @@ Jawab: Ketika kode diketikkan ke dalam VScode terdapat beberapa error di program
     "The method setMark(int) in the type Student is not applicable for the arguments ()",
     "The method setName(String) in the type Student is not applicable for the arguments ()",
     "The method setMark(int) in the type Student is not applicable for the arguments (String)".
-error tersebut dikarenakan adanay kelashan berikut
+error tersebut dikarenakan adaya kesalahan berikut
 '''
     s1.setMark("90"); //Parameter dalam method setMark adalah int sedangkan yang dimasukkan adalah String
     System.out.println("s1Name is " + s1.setName()); //Untuk mengakses atribut name perlu menggunakan method getName, 
@@ -124,6 +124,7 @@ error pada saat kode ditambahkan dan output dari program tersebut adalah:
     Vehicle load is 9750.0kg
     Add load(100kg) : 500.0
 
+
 5. Ulangi instruksi pada nomer 4 dengan mengubah tipe data pada atribut load dan maxload 
 pada class Vehicle1 menjadi default. 
 Jawab: etelah tipe data atribut load dan maxload diubah menjadi default, tidak terjadi error 
@@ -136,6 +137,7 @@ pada saat kode ditambahkan dan output dari program tersebut adalah:
     Add box #5 (300kg) : false
     Vehicle load is 9750.0kg
     Add load(100kg) : 500.0
+
 
 Tugas Praktikum
 Anda dan tim anda mendapat sebuah proyek untuk merancang sistem transaksi pada 
