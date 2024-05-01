@@ -1,0 +1,76 @@
+1. Jalankan code program diatas dan benahi jika menemukan kesalahan!
+Jawab: Percobaan tersebut dapat dilakukan tanpa adanya error, hal ini menandakan bahwa tidak
+ada kesalahan dalam program tersebut.
+
+2. Bagaimana cara konstruktor pada subclass memanggil konstruktor di superclass nya? 
+Apakah hal itu perlu dilakukan? Sertakan alasan anda !
+Jawab: Dengan menambahkan kata kunci extends setelah deklarasi nama class,  kemudian 
+diikuti dengan nama parent  class-nya. Kata kunci extends tersebut memberitahu kompiler 
+Java bahwa kita akan melakukan perluasan class, contoh deklarasi : 
+public class Manager extends Employee { ... } 
+Cara konstruktor pada subclass memanggil konstruktor di superclass, yaitu 
+menggunakan syntax 'Super()' dalam konstruktor subclass, seperti berikut:
+'''
+public Manager(String name, double salary, int year, int month, int day) {
+        super(name, salary, year, month, day);
+        bonus = 0;
+    }
+'''
+konstruktor Manager menerima beberapa parameter (name, salary, year, month, day) dan 
+kemudian memanggil konstruktor superclass menggunakan super(name, salary, year, month, day). 
+Ini menginisialisasi data yang diperlukan untuk objek Manager dengan data yang sama yang diterima 
+oleh konstruktor superclass.
+
+ 
+3.Tambahkan constructor pada class Employee dengan parameter String name! amati 
+perubahan apa yang terjadi, jelaskan jawaban anda! 
+Jawab: Setelah constructor dengan parameterString name ditambahkan pada class
+Employee perubahan yang terjadi adalah memungkinkan pembuatan objek Employee dengan 
+hanya memberikan nama sebagai informasi yang diperlukan, sementara nilai-nilai lain seperti 
+gaji dan tanggal hireday diinisialisasi secara default.
+
+
+4. Pada Class Manager baris ke 5, setelah variable day tambahkan variable bonus! Amati 
+apa yang terjadi dan mengapa demikian? 
+Jawab: Setelah variabel bonus ditambahkan setelah variabel day pada Class Manager baris ke 5
+akan terjadi error hal ini karena variabel bonus bukan merupakan variabel dari Constructor 
+Class Employee.
+
+5. Untuk apa digunakan keyword this pada class manager dan employee? Hapus keyword 
+this dan amati apa yang terjadi?
+Jawab:Keyword this digunakan dalam Java untuk merujuk pada objek saat ini di dalam class tertentu. 
+Jika kita menghapus keyword this dari kode, maka akan terjadi kesalahan kompilasi karena 
+Java akan bingung tentang apakah kita merujuk pada variabel lokal atau atribut kelas. Jika kita 
+menghapus keyword this, maka Java akan menganggap bahwa variabel yang digunakan adalah variabel 
+lokal dalam method atau constructor, bukan variabel instance dari class.
+
+6. Tambahkan constructor pada class Employee dengan parameter Bertipe data string 
+bernama name yang nantinya bila constructor ini akan dipanggil akan menginisialisasi 
+variable name! Amati perubahannya pada class anak dan jelaskan! Benahi bila  terjadi 
+kesalahan!
+Jawab: Pada Class anak tidak terjadi error setelah constructor ditambhakan, apabila constructor
+tersebut dipanggil maka harus mengganti constructor yang lama.
+
+7. Pada bab sebelumnya anda telah belajar mengenai konsep encapsulation, jelaskan
+mengapa pada super class menggunakan modifier protected? Apa yang terjadi jika 
+modifier anda ubah menjadi private atau public? Jelaskan ! 
+Jawab: Penggunaan modifier protected pada superclass dalam konteks pewarisan adalah 
+untuk memberikan keseimbangan yang baik antara aksesibilitas yang terbatas (agar hanya 
+subclass yang dapat mengakses) dan kemampuan untuk diwariskan dan digunakan kembali di 
+dalam subclass. Mengubah modifier menjadi private atau public dapat mengganggu prinsip 
+encapsulation dan penggunaan yang efisien dari pewarisan dalam pemrograman berorientasi 
+objek.
+
+8. Ubahlah acces modifier method pada kelas employee menjadi : 
+a. Private 
+b. Protected 
+Amati perubahan apa yang terjadi? Jelaskan jawaban anda dengan detail!
+Jawab: 
+a. Jika access modifier method dalam kelas Employee diubah menjadi 
+private, maka method tersebut hanya dapat diakses di dalam kelas Employee 
+itu sendiri. Artinya, tidak ada kelas lain yang dapat menggunakan method 
+tersebut, termasuk subclass seperti Manager.
+b. Jika access modifier method dalam kelas Employee diubah menjadi protected, 
+maka method tersebut dapat diakses oleh kelas Employee itu sendiri, subclass 
+seperti Manager, dan juga kelas-kelas yang berada dalam paket yang sama dengan 
+kelas Employee.

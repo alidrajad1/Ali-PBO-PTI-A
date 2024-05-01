@@ -1,3 +1,4 @@
+package src;
 public class Vehicle1 {
     // private double load, maxLoad;
     // public double load, maxLoad;

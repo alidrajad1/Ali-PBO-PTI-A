@@ -1,3 +1,4 @@
+package src;
 public class Rasional {
     private int pembilang, penyebut;
 

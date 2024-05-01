@@ -1,3 +1,4 @@
+package src;
 public class LingkaranMain {
     public static void main(String[] args) {
         Lingkaran l = new Lingkaran(3);

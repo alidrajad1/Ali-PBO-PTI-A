@@ -1,3 +1,4 @@
+package src;
 public class RasionalDemo {
     public static void main(String[] args) {
         Rasional R1 = new Rasional(1, 2);

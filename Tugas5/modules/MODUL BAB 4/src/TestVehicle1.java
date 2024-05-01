@@ -1,3 +1,4 @@
+package src;
 public class TestVehicle1 {
   public static void main(String[] args) {
     System.out.println("Creating a vehicle with a 10,000 kg maximumload.");
