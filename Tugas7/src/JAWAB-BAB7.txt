@@ -1,0 +1,213 @@
+1. Ketikkan kode ini
+'''
+public class Main { 
+   public static void main(String[] args) { 
+        Employee employee = new Employee(); 
+    } 
+}
+'''
+Jalankan Main.java untuk polymorfisme Employee, analisis dan jelaskan keluaran 
+program tersebut!
+Jawab: Pada bagian pertama program, yang menghasilkan error Employee employee = new Employee();, 
+error terjadi karena class Employee bersifat abstract dan tidak dapat diinstansiasi secara langsung. 
+Sebagai class abstract, Employee hanya bisa digunakan sebagai blueprint untuk class turunannya seperti 
+SalariedEmployee, HourlyEmployee, CommissionEmployee, dan BasePlusCommissionEmployee.
+
+2. Jalankan program dengan main sebagai berikut.
+'''
+public class Main {
+    public static void main(String[] args) {
+        SalariedEmployee salariedEmployee = new SalariedEmployee("Daniel", "135", 800.00);
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Karina", "234", 16.75, 40);
+        CommissionEmployee commissionEmployee = new CommissionEmployee("Keanu", "145", 10000, .06);
+        BasePlusCommissionEmployee basePlusCommissionEmployee = new BasePlusCommissionEmployee("Bondan", "234", 5000,
+                .04, 300);
+        System.out.println("Employees diproses secara terpisah:\n");
+        System.out.printf("%s\n%s: $%,.2f\n\n", salariedEmployee, "pendapatan: ", salariedEmployee.earnings());
+        System.out.printf("%s\n%s: $%,.2f\n\n", hourlyEmployee, "pendapatan: ", hourlyEmployee.earnings());
+        System.out.printf("%s\n%s: $%,.2f\n\n", commissionEmployee, "pendapatan: ", commissionEmployee.earnings());
+        System.out.printf("%s\n%s: $%,.2f\n\n", basePlusCommissionEmployee, "earned",
+                basePlusCommissionEmployee.earnings());
+
+        Employee[] employees = new Employee[4];
+        employees[0] = salariedEmployee;
+        employees[1] = hourlyEmployee;
+        employees[2] = commissionEmployee;
+
+        employees[3] = basePlusCommissionEmployee;
+        System.out.println("Employees diproses secara polimorfisme:\n");
+        for (Employee currentEmployee : employees) {
+            System.out.println(currentEmployee);
+            if (currentEmployee instanceof BasePlusCommissionEmployee) {
+                BasePlusCommissionEmployee employee = (BasePlusCommissionEmployee) currentEmployee;
+                employee.setBaseSalary(1.10 * employee.getBaseSalary());
+                System.out.printf("Gaji  pokok  setelah  dinaikkan  10%%  : $%,.2f\n", employee.getBaseSalary());
+            }
+            System.out.printf("pendapatan: $%,.2f\n\n", currentEmployee.earnings());
+        }
+        for (int j = 0; j < employees.length; j++) {
+            System.out.printf("Employee %d = %s\n", j, employees[j].getClass().getName());
+        }
+    }
+}
+'''
+Analisis dan jelaskan output program (berdasarkan konsep polimorfisme)!
+Jawab: Output dari program ini berdasarkan konsep polimorfisme adalah sebagai berikut:
+
+Employees diproses secara terpisah:
+Output untuk setiap karyawan diproses secara terpisah dengan format yang sesuai dengan 
+method toString() yang telah Anda definisikan dalam masing-masing kelas.Untuk setiap karyawan, 
+output mencakup nama, nomor KTP, dan informasi lain yang sesuai dengan jenis karyawan (gaji mingguan, 
+upah per jam, penjualan kotor, komisi, dan gaji pokok).
+
+Employees diproses secara polimorfisme:
+Karyawan-karyawan disimpan dalam array Employee[] dan diproses secara polimorfisme 
+menggunakan loop for-each.Setiap karyawan diambil dari array dan diproses menggunakan 
+method toString() dan earnings() secara dinamis berdasarkan tipe karyawan yang sesuai.
+Jika karyawan adalah BasePlusCommissionEmployee, gaji pokoknya dinaikkan 10% dan kemudian 
+pendapatannya dihitung. Output mencakup nama karyawan, tipe karyawan, dan pendapatan yang 
+dihasilkan setelah proses polimorfisme.
+
+Analisis Output:
+Output akan mencakup informasi detail tentang setiap karyawan, termasuk karyawan yang memiliki
+gaji pokok yang dinaikkan. Pendapatan setiap karyawan dihitung sesuai dengan logika yang telah 
+Anda definisikan dalam masing-masing kelas turunan Employee.Penggunaan polimorfisme memungkinkan 
+pemrosesan yang fleksibel terhadap objek-objek karyawan tanpa harus mengetahui jenis karyawan secara 
+spesifik, sehingga meningkatkan fleksibilitas dan keamanan program.
+
+3. Buat objek dari method Employee? Jelaskan hasil dari output program tersebut!
+Jawab: Kita tidak dapat membuat objek langsung dari kelas abstrak Employee karena 
+kelas tersebut adalah kelas abstrak yang tidak dapat diinstansiasi. Hasil dari output
+program tersebut adalah error.
+
+4. Tambahkan atribut tanggal lahir di Kelas Employee, serta tambahkan method 
+pendukungnya (accesor dan mutator). Modifikasi program agar sesuai. Asumsikan gaji 
+yang diterima adalah per bulan, buat kelas uji untuk menguji program yang sudah anda 
+modifikasi, kemudian buat objek dari semua class (salariedEmployee, hourlyEmployee, 
+commissionEmployee, basePlusCommissionEmployee dan hitung gajinya secara 
+polimorfisme, serta tambahkan gajinya sebesar 100.000 jika bulan ini adalah bulan ulang 
+tahunnya.
+Jawab: 
+'''
+import java.time.LocalDate;
+
+public class Employee {
+    private String name;
+    private String noKTP;
+    private LocalDate birthdate; // tambahkan atribut tanggal lahir
+
+    public Employee(String name, String noKTP, LocalDate birthdate) {
+        this.name = name;
+        this.noKTP = noKTP;
+        this.birthdate = birthdate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getNoKTP() {
+        return noKTP;
+    }
+
+    public LocalDate getBirthdate() { // tambahkan accessor untuk tanggal lahir
+        return birthdate;
+    }
+
+    public void setBirthdate(LocalDate birthdate) { // tambahkan mutator untuk tanggal lahir
+        this.birthdate = birthdate;
+    }
+
+    public double earnings() {
+        return 0.0; // implementasi sesuai dengan logika penghitungan gaji masing-masing karyawan
+    }
+
+    public boolean isBirthdayMonth() {
+        LocalDate today = LocalDate.now();
+        return today.getMonth() == birthdate.getMonth(); // mengecek apakah bulan ini adalah bulan ulang tahun
+    }
+}
+'''
+
+5. Perusahaan yang mengaplikasikan program polimorfisme diatas ingin menambahkan 
+kriteria baru untuk penggajian karyawannya, yaitu penggajian berdasarkan banyaknya 
+barang yang diproduksi. Dengan ketentuan gaji karyawan tersebut adalah hasil dari 
+banyaknya barang yang dipoduksi per minggu dikalikan upah per barangnya.  
+a. Analisis dan jelaskan proses modifikasi program diatas (dimulai dari pemilihan jenis 
+class, perancangan class, dan penempatan class) 
+b. Implementasi hasil analisis tersebut ke dalam program dan buat kelas uji dengan 
+minimal 4 objek yang dibentuk.
+Jawab: 
+
+a. Analisis dan Perancangan:
+Pemilihan Jenis Class: Kriteria baru ini mengacu pada produksi barang, sehingga kelas yang paling 
+sesuai untuk mewakili ini adalah kelas ProductionEmployee atau sejenisnya.
+Perancangan Class: Kita perlu membuat kelas baru ProductionEmployee yang merupakan turunan dari 
+kelas Employee karena karyawan produksi juga masih termasuk dalam karyawan perusahaan.
+Penempatan Class: Kelas ProductionEmployee akan ditempatkan bersama dengan kelas-kelas lainnya, 
+seperti SalariedEmployee, HourlyEmployee, CommissionEmployee, dan BasePlusCommissionEmployee.
+
+b. Program implementasi
+'''
+import java.time.LocalDate;
+
+public class ProductionEmployee extends Employee {
+    private double wagePerItem; // upah per barang
+    private int itemsProduced; // banyaknya barang yang diproduksi
+
+    public ProductionEmployee(String name, String noKTP, double wagePerItem, int itemsProduced, LocalDate birthdate) {
+        super(name, noKTP, birthdate);
+        this.wagePerItem = wagePerItem;
+        this.itemsProduced = itemsProduced;
+    }
+
+    public double getWagePerItem() {
+        return wagePerItem;
+    }
+
+    public void setWagePerItem(double wagePerItem) {
+        this.wagePerItem = wagePerItem;
+    }
+
+    public int getItemsProduced() {
+        return itemsProduced;
+    }
+
+    public void setItemsProduced(int itemsProduced) {
+        this.itemsProduced = itemsProduced;
+    }
+
+    @Override
+    public double earnings() {
+        return wagePerItem * itemsProduced; // menghitung gaji berdasarkan produksi barang
+    }
+}
+'''
+
+'''
+public class Main {
+    public static void main(String[] args) {
+        LocalDate johnBirthdate = LocalDate.of(1990, 5, 15); // contoh tanggal lahir untuk John
+        ProductionEmployee productionEmployee = new ProductionEmployee("John", "123", 10.50, 500, johnBirthdate);
+
+        LocalDate janeBirthdate = LocalDate.of(1995, 8, 20); // contoh tanggal lahir untuk Jane
+        ProductionEmployee anotherProductionEmployee = new ProductionEmployee("Jane", "456", 12.75, 700, janeBirthdate);
+
+        // Objek dari kelas-kelas lain juga bisa tetap dibuat
+        SalariedEmployee salariedEmployee = new SalariedEmployee("Daniel", "135", 800.00, LocalDate.of(1985, 3, 10));
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Karina", "234", 16.75, 40, LocalDate.of(1992, 10, 25));
+        CommissionEmployee commissionEmployee = new CommissionEmployee("Keanu", "145", 10000, .06, LocalDate.of(1978, 12, 3));
+        BasePlusCommissionEmployee basePlusCommissionEmployee = new BasePlusCommissionEmployee("Bondan", "234",
+                5000, .04, 300, LocalDate.of(1998, 7, 15));
+
+        // Menghitung gaji karyawan secara polimorfisme
+        Employee[] employees = new Employee[] { productionEmployee, anotherProductionEmployee, salariedEmployee,
+                hourlyEmployee, commissionEmployee, basePlusCommissionEmployee };
+
+        for (Employee employee : employees) {
+            System.out.printf("%s: $%,.2f\n", employee.getName(), employee.earnings());
+        }
+    }
+}
+'''
+
