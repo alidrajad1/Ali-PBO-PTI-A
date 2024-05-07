@@ -15,10 +15,6 @@ public class KueJadi extends Kue {
         return jumlah;
     }
 
-    public void setJumlah(double jumlah) {
-        this.jumlah = jumlah;
-    }
-
     public double hitungHarga() {
         return getHarga() * getJumlah() * 2;
     }

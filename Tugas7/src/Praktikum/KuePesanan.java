@@ -12,10 +12,6 @@ public class KuePesanan extends Kue {
         return berat;
     }
 
-    public void setBerat(double berat) {
-        this.berat = berat;
-    }
-
     public double hitungHarga() {
         return getHarga() * getBerat();
     }

@@ -13,10 +13,6 @@ public class KueBasi extends Kue {
         return lamaHari;
     }
 
-    public void setLamaHari(int lamaHari) {
-        this.lamaHari = lamaHari;
-    }
-
     public double hitungHarga() {
         return getHarga() - (getLamaHari() * (getHarga() * 0.1));
     }

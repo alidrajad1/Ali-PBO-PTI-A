@@ -13,16 +13,8 @@ public abstract class Kue {
         return nama;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
     public double getHarga() {
         return harga;
-    }
-
-    public void setHarga(double harga) {
-        this.harga = harga;
     }
 
     public abstract double hitungHarga();
