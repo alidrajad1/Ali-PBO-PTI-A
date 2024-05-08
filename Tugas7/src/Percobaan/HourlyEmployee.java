@@ -1,8 +1,16 @@
 package Percobaan;
 
+import java.time.LocalDate;
+
 public class HourlyEmployee extends Employee {
     private double wage; // upah per jam
     private double hours; // jumlah jam tiap minggu
+
+    public HourlyEmployee(String name, String noKTP, LocalDate birthdate, double wage, double hours) {
+        super(name, noKTP, birthdate);
+        this.wage = wage;
+        this.hours = hours;
+    }
 
     public HourlyEmployee(String name, String noKTP,
             double hourlyWage, double hoursWorked) {

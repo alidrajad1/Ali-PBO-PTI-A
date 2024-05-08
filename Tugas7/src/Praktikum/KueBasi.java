@@ -20,6 +20,6 @@ public class KueBasi extends Kue {
     @Override
     public String toString() {
         
-        return super.toString()+"\nLama hari: " + getLamaHari();
+        return super.toString()+"\nLama hari: " + getLamaHari()+"\n";
     }
 }

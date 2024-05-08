@@ -1,8 +1,17 @@
 package Percobaan;
 
+import java.time.LocalDate;
+
 public class CommissionEmployee extends Employee {
     private double grossSales;// penjualan per minggu
     private double commissionRate;// komisi
+
+    public CommissionEmployee(String name, String noKTP, LocalDate birthdate, double grossSales,
+            double commissionRate) {
+        super(name, noKTP, birthdate);
+        this.grossSales = grossSales;
+        this.commissionRate = commissionRate;
+    }
 
     public CommissionEmployee(String name, String noKTP, double sales, double rate) {
         super(name, noKTP);

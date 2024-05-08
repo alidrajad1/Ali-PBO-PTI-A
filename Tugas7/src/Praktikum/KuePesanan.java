@@ -19,7 +19,7 @@ public class KuePesanan extends Kue {
     @Override
     public String toString() {
 
-        return super.toString() + "\nBerat: " + getBerat();
+        return super.toString() + "\nBerat: " + getBerat()+"\n";
     }
 
 }

@@ -43,7 +43,7 @@ public class Main {
                     for (Kue kue : kueArray) {
                         totalHarga += kue.hitungHarga();
                     }
-                    System.out.println("Total Harga Semua Kue: $" + totalHarga);
+                    System.out.println("Total Harga Semua Kue: $" + totalHarga+"\n");
                     break;
                 case 3:
                     double totalHargaPesanan = 0;
@@ -55,7 +55,7 @@ public class Main {
                         }
                     }
                     System.out.println("Total Harga Kue Pesanan: $" + totalHargaPesanan);
-                    System.out.println("Total Berat Kue Pesanan: " + totalBeratPesanan + " kg");
+                    System.out.println("Total Berat Kue Pesanan: " + totalBeratPesanan + " kg\n");
                     break;
                 case 4:
                     double totalHargaJadi = 0;
@@ -67,7 +67,7 @@ public class Main {
                         }
                     }
                     System.out.println("Total Harga Kue Jadi: $" + totalHargaJadi);
-                    System.out.println("Total Jumlah Kue Jadi: " + totalJumlahJadi);
+                    System.out.println("Total Jumlah Kue Jadi: " + totalJumlahJadi+"\n");
                     break;
                 case 5:
                     double hargaTerbesar = 0;
@@ -80,9 +80,9 @@ public class Main {
                     }
                     if (kueTerbesar != null) {
                         System.out.println("\nKue dengan Harga Terbesar:");
-                        System.out.println(kueTerbesar.toString());
+                        System.out.println(kueTerbesar.toString()+"\n");
                     } else {
-                        System.out.println("Tidak ada kue dengan harga terbesar.");
+                        System.out.println("Tidak ada kue dengan harga terbesar.\n");
                     }
                     break;
                 case 6:
@@ -95,14 +95,14 @@ public class Main {
                         }
                     }
                     System.out.println("Total Harga Kue Basi: $" + totalHargaBasi);
-                    System.out.println("Total Lama Hari Kue Basi: " + totalLamaHari + " hari");
+                    System.out.println("Total Lama Hari Kue Basi: " + totalLamaHari + " hari\n");
                     break;
                 case 7:
                     exit = true;
-                    System.out.println("Program selesai.");
+                    System.out.println("Program selesai.\n");
                     break;
                 default:
-                    System.out.println("Opsi menu tidak valid. Silakan pilih opsi yang sesuai.");
+                    System.out.println("Opsi menu tidak valid. Silakan pilih opsi yang sesuai.\n");
                     break;
             }
         }

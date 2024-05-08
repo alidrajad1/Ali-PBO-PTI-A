@@ -22,6 +22,6 @@ public class KueJadi extends Kue {
     @Override
     public String toString() {
 
-        return super.toString() + "\nJumlah: " + getJumlah();
+        return super.toString() + "\nJumlah: " + getJumlah()+"\n";
     }
 }

@@ -1,12 +1,14 @@
 package Percobaan;
 
+import java.time.LocalDate;
+
 // public class Main { 
 //     public static void main(String[] args) { 
 //          Employee employee = new Employee(); 
 //      } 
 //  }
 
-//  public class Main {
+// public class Main {
 //     public static void main(String[] args) {
 //         SalariedEmployee salariedEmployee = new SalariedEmployee("Daniel", "135", 800.00);
 //         HourlyEmployee hourlyEmployee = new HourlyEmployee("Karina", "234", 16.75, 40);
@@ -41,3 +43,29 @@ package Percobaan;
 //         }
 //     }
 // }
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDate johnBirthdate = LocalDate.of(1990, 5, 15); // contoh tanggal lahir untuk John
+        ProductionEmployee productionEmployee = new ProductionEmployee("John", "123", 10.50, 500, johnBirthdate);
+
+        LocalDate janeBirthdate = LocalDate.of(1995, 8, 20); // contoh tanggal lahir untuk Jane
+        ProductionEmployee anotherProductionEmployee = new ProductionEmployee("Jane", "456", 12.75, 700, janeBirthdate);
+
+        // Objek dari kelas-kelas lain juga bisa tetap dibuat
+        SalariedEmployee salariedEmployee = new SalariedEmployee("Daniel", "135", 800.00, LocalDate.of(1985, 3, 10));
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Karina", "234", LocalDate.of(1992, 10, 25), 40, 16.75);
+        CommissionEmployee commissionEmployee = new CommissionEmployee("Keanu", "145", LocalDate.of(1978, 12, 3), .06,
+                10000);
+        BasePlusCommissionEmployee basePlusCommissionEmployee = new BasePlusCommissionEmployee("Bondan", "234",
+                LocalDate.of(1998, 7, 15), .04, 300, 5000);
+
+        // Menghitung gaji karyawan secara polimorfisme
+        Employee[] employees = new Employee[] { productionEmployee, anotherProductionEmployee, salariedEmployee,
+                hourlyEmployee, commissionEmployee, basePlusCommissionEmployee };
+
+        for (Employee employee : employees) {
+            System.out.printf("%s: $%,.2f\n", employee.getName(), employee.earnings());
+        }
+    }
+}

@@ -1,6 +1,13 @@
 package Percobaan;
 
+import java.time.LocalDate;
+
 public class SalariedEmployee extends Employee {
+    public SalariedEmployee(String name, String noKTP, double weeklySalary, LocalDate birthdate) {
+        super(name, noKTP, birthdate);
+        this.weeklySalary = weeklySalary;
+    }
+
     private double weeklySalary; // gaji/minggu
 
     public SalariedEmployee(String name, String noKTP, double salary) {
