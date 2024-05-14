@@ -1,0 +1,36 @@
+1. Jelaskan apa fungsi dari extends dan super pada kode subclass?
+Jawab: extends digunakan untuk membuat subclass yang mewarisi atribut dan
+metode dari superclass, sedangkan super digunakan dalam subclass untuk 
+merujuk atau memanggil metode atau konstruktor dari superclass.
+
+2. Untuk apa digunakan keyword this pada constructor, setter dan getter?
+Jawab: Keyword this digunakan dalam constructor, setter, dan getter untuk 
+merujuk ke objek saat ini yang sedang dibuat atau diakses atributnya.
+Constructor: this digunakan untuk membedakan antara parameter konstruktor dengan 
+atribut objek. Misalnya, this.nama = nama; digunakan untuk menginisialisasi atribut 
+nama objek dengan nilai dari parameter konstruktor.
+Setter: this digunakan untuk mengakses atribut objek saat mengatur nilainya. Contohnya, 
+this.nama = namaBaru; digunakan untuk mengubah nilai atribut nama menjadi namaBaru.
+Getter: this tidak selalu digunakan dalam getter, tetapi dapat digunakan untuk mengakses 
+atribut objek saat mengembalikan nilainya. Misalnya, return this.nama; digunakan untuk mengembalikan 
+nilai atribut nama.
+
+3. Tambahkan dan jalankan kode ini di kelas Main, lalu amati apa yang terjadi?
+    '''
+    HeroAgility hero3 = (HeroAgility) heroUp;
+    hero3.display();
+    '''
+Jawab: Kode yang diberikan mencoba untuk melakukan downcasting objek heroUp menjadi objek 
+HeroAgility dan kemudian memanggil metode display() dari objek hero3. Namun, karena 
+heroUp adalah objek dari kelas HeroIntel yang tidak berhubungan dengan HeroAgility, 
+maka akan terjadi error saat runtime karena downcasting tidak dapat dilakukan antara 
+kelas yang tidak berhubungan.
+
+4. Ubahlah modifier atribut type pada class HeroIntel dan HeroAgility menjadi public, lalu coba akses
+langsung melalui class Main. Apakah atribut bisa diakses langsung atau tidak, jelaskan!
+Jawab: Setelah mengubah modifier atribut type pada class HeroIntel dan HeroAgility menjadi public, 
+atribut tersebut dapat diakses langsung melalui class Main. 
+
+5.  Buatlah class baru HeroMagic dengan atribut tambahan power = "Magic" serta extends semua
+atribut dan method dari class Hero. Kemudian coba buatlah kode untuk upcasitng dan downcasting
+dari class HeroMagic ke Hero pada class Main!

@@ -1,7 +1,7 @@
 package Tugas8.src.Percobaan;
 
 public class HeroIntel extends Hero {
-    String type;
+   public String type;
 
     public HeroIntel(String name, double health) {
         super(name, health);

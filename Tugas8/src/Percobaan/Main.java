@@ -8,6 +8,8 @@ public class Main {
         // System.out.println(angka_int);
         // Object dengan class HeroIntel
         HeroIntel hero1 = new HeroIntel("Ucup", 100);
+
+        System.out.println(hero1.type);
         hero1.display();
         // upcasting
         Hero heroUp = (Hero) hero1;
@@ -22,5 +24,17 @@ public class Main {
         // heroUp dikembalikan ke hero1
         HeroIntel hero2 = (HeroIntel) heroUp;
         hero2.display(); // ini berhasil downcasting
+
+    //     HeroAgility hero3 = (HeroAgility) heroUp;
+    // hero3.display();
+
+        HeroMagic hero3 = new HeroMagic("Mage", 90);
+        hero3.display();
+        // upcasting
+        Hero herou = (Hero) hero3;
+        herou.display();
+        // downcasting
+        HeroMagic herod = (HeroMagic) herou;
+        herod.display();
     }
 }
