@@ -9,8 +9,6 @@ public class Manusia implements MakhlukHidup, Identitas {
         this.umur = umur;
     }
 
-    
-
     @Override
     public void makan() {
         System.out.println("Makan pakai sendok garpu");
