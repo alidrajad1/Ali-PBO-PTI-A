@@ -1,0 +1,44 @@
+1. Lakukan percobaan diatas dan benahi jika menemukan kesalahan serta jelaskan!
+Jawab: kode program diatas memerlkan beberapa perbaikan :
+a. Class Manusia merlukan konstruktor untuk menginisialisasi nama dan umur
+b. Class Hewan mengimplementasikan Identitas, tetapi tidak mengimplementasikan
+method tampilkanNama dan tampilkanUmur dengan benar
+c. Pada Hewan, implementasi metode tampilkanNama dan tampilkanUmur 
+sebaiknya memberikan output atau penjelasan.
+
+2. Apakah class yang berbentuk interface bisa diintansiasi menjadi sebuah objek? 
+Jelaskan alasannya!
+Jawab: Interface tidak dapat diinstansiasi menjadi objek karena mereka hanya 
+mendefinisikan method tanpa implementasi. Interface digunakan untuk mendefinisikan
+kontrak yang harus diikuti oleh class yang mengimplementasikan interface tersebut.
+
+3. Apakah suatu class dapat mengimplementasi class interface yang jumlahnya
+lebih dari satu? Jelaskan alasannya!
+Jawab: Suatu class dapat mengimplementasikan lebih dari satu interface. 
+Java mendukung multiple inheritance melalui interfaces. Ini memungkinkan class 
+untuk mendapatkan kemampuan dari beberapa interface, meskipun Java tidak mendukung 
+multiple inheritance dari classes.
+
+4.Pada interface Identitas.java hapus method tampilkan nama, amati apa yang terjadi
+dan mengapa demikian?
+Jawab: Jika menghapus method tampilkanNama dari interface Identitas, class Manusia 
+dan Hewan yang mengimplementasikan interface tersebut akan memberikan kesalahan 
+kompilasi jika masih berusaha mengoverride method tersebut. Mereka harus menghapus 
+implementasi method tampilkanNama atau method tersebut harus didefinisikan di interface 
+lain yang mereka implementasikan.
+
+5. Jika pada class hewan  kita hanya ingin mengimplements interface MakhlukHidup saja
+apa yang terjadi? Jelaskan.
+Jawab: Jika class Hewan hanya mengimplementasikan interface MakhlukHidup, maka class 
+Hewan tidak perlu lagi mengimplementasikan method-method dari interface Identitas. Kode 
+akan tetap bekerja, tetapi Hewan tidak akan memiliki kemampuan untuk menampilkan nama 
+dan umur.
+
+6. Buatlah konstruktor pada manusia dengan parameter umur dan nama kemudian panggil 
+pada Class Main dengan menginstan objek bernama nama anda!
+
+7. Ubah source code diatas menjadi proses meminta inputan dari user dan buat menjadi
+Interaktif!
+
+8. Buat objek selain objek diatas dengan menggunakan method yang berbeda dengan yang
+diatas! (mi. 1 contoh)
