@@ -6,4 +6,4 @@ NIM  : 235150600111010
 
 ## 🔗 Link Penjelasan Tugas
 
-https://youtu.be/Q2DebnrNj3s
+https://youtu.be/LBc1YQFCZfw
